@@ -1,0 +1,106 @@
+@-webkit-keyframes blink {
+    /*from, to {color: transparent;}  //this is the original code part, but I use percentage instead of from to for more wide broser support*/
+    0% {
+        color: transparent;
+    }
+    50% {
+        color: black;
+    }
+    100% {
+        color: transparent;
+    }
+}
+
+@keyframes blink {
+    /*from, to {color: transparent;}  //this is the original code part, but I use percentage instead of from to for more wide broser support*/
+    0% {
+        color: transparent;
+    }
+    50% {
+        color: black;
+    }
+    100% {
+        color: transparent;
+    }
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #0f110d;
+}
+
+#container {
+    min-height: 90vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#teletype {
+    font-family: monospace;
+    font-size: 2rem;
+    display: block;
+    width: 33rem;
+    color: #00f018;
+}
+
+#teletype span {
+    -webkit-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+    color: #00f018;
+}
+
+footer {
+    padding: 0rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+form {
+    background: rgba(53, 51, 44, 0.5);
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    -webkit-transition: 0.66s;
+    transition: 0.87s;
+}
+
+/*FOOTER*/
+.hideaway {
+    display: flex;
+    justify-content: center;
+    -webkit-transform: translateY(10vw);
+    transform: translateY(10vw);
+}
+#typer {
+    padding: 0.7rem;
+    font-size: inherit;
+    min-width: 29rem;
+    color: #806e38;
+    border-color: hsla(50, 47%, 34%, 0.3);
+    flex-grow: 1;
+}
+input[type="submit"] {
+    font-size: 1.3em;
+    /* display: inline-block;*/
+    border: dotted;
+    color: #806e38;
+    border-radius: 9px;
+    padding: 7px 10px;
+    margin: 4px 12px;
+    text-align: center;
+}
+#btn:hover {
+    color: #d1ba73;
+    /*font-weight: bold;*/
+}
+/*# sourceMappingURL=consoleTextAnim.css.map */

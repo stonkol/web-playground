@@ -1,0 +1,11 @@
+*{
+  background-color: #F44336;
+}
+body {
+ top: 0;
+  display: flex;
+  //  justify-content: center;
+   // align-items: center;
+    height: 100vh;
+   flex-wrap: wrap;
+}

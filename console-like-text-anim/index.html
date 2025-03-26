@@ -1,0 +1,39 @@
+<!----forked from:
+https://codepen.io/dudleystorey/pen/WGrWQO
+
+////////////VERSIONS////////////
+0.1 change background and text to "hacker like"
+0.2 add some Inline text semantics {br, b}
+0.3 make the footer dimmer and classic
+0.4 Make a good sticky footer
+0.41 hide it weel at the begining
+0.5 MOAR things
+---->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Originally on: https://codepen.io/stonkol/pen/bGWoLLJ -->
+        <div id="container">
+            <span id="teletype" hidden></span>
+        </div>
+
+        <footer>
+            <form class="hideaway">
+                <input
+                    type="text"
+                    id="typer"
+                    value="With this effect <br>the text appears more ... you know ... <br>like Matrix <br> <br> <b>Rigth?"
+                />
+                <input type="submit" value="Type It!" />
+            </form>
+        </footer>
+    </body>
+</html>
