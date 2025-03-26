@@ -1,0 +1,81 @@
+body {
+  background-color: rgb(195, 218, 242);
+  text-align: center;
+}
+#layout {
+  display: flex; // 100% width
+  //display: inline-flex; //wrap around the elements
+
+  ////////////// WRAP ////////////////////////////
+  //   flex-wrap: wrap; //if overflow will go to the next row
+
+  /////////////// DIRECTION ///////////////////
+  //   flex-direction: row; //default, same as unset
+  // flex-direction: row-reverse;//reverse the direction
+  // flex-direction: column;
+  //flex-direction: column-reverse;
+
+  //////////////// FLOW (WRAP+DIRECTON) ///////////
+  flex-flow: row wrap; //concadinate flex-direction and  flex-wrap
+
+  /////////////// ORDER (do on the items)/////////////
+
+  /////////////// GROW (do on the items)/////////////
+  //   flex-grow: 0; // unset
+  flex-grow: 1; //fill
+  //flex gorw on different items to set their proportional withness
+
+  //////////// JUSTIFY (R-L)///////////////
+  // justify-content: right; // flex-end;//go to the rigth
+  //   justify-content: left; //flex-start; //to the left
+  //   justify-content: space-between;
+  //   justify-content: space-around;
+  justify-content: space-evenly;
+
+  //////////// ALIGN (top-bottom) ////////////
+  height: 400px;
+  align-items: flex-start;
+  //   align-items: flex-start; //top
+  //   align-items: flex-end; //btm
+  //   align-items: stretch;//top to btm
+  //   align-items: center;
+
+  border: 2px solid black;
+  padding: 5px;
+}
+.caja {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: aliceblue;
+  padding: 20px;
+  border: 2px solid black;
+  margin: 10px;
+  background: gray;
+  transition: 0.3s;
+}
+.red {
+  //   flex-grow: 1;
+  //   flex-shrink: 0;
+  background: crimson;
+}
+.green {
+  margin-top: 7%;
+  //   flex-basis: 25%; //min-width: 25%;
+  //   flex-grow: 2;
+  //   order: 1; //if others don't have it will be the last one
+  background: rgb(24, 122, 24);
+}
+.blue {
+  align-self: center;
+  //   flex-basis: calc(100% / 3);
+  //   order: -1; //if the others doesn't have order, then you need to put -1 for be the first, like in the z-index;
+  //   flex-grow: 4;
+  background: darkslateblue;
+}
+.orange {
+  align-self: flex-end;
+  //   flex-basis: 100%;
+  // flex-grow: 8;
+  background: darkorange;
+}

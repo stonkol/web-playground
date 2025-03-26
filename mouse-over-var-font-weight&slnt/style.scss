@@ -1,0 +1,147 @@
+////////////// Font Family ////////////
+$ff-recursive:
+    "Recursive", consolas, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    color-emoji;
+
+////// Variable Font Default //////////
+$MONO: "MONO" 0; //Monospace
+$CASL: "CASL" 0.3; // Casual
+$wght: "wght" 500;
+$slnt: "slnt" 0; // Upright
+$CRSV: "CRSV" 0; // 0.5 is Auto Cursive
+//font-variation-settings: $MONO, $CASL, "wght" $font-weight-normal, $slnt;
+// "MONO" var(--MONO), "CASL" var(--CASL),
+//     "slnt" var(--slnt), "CRSV" var(--CRSV);
+
+//////////// COLORS ///////////////
+$background-color: hsl(40, 33%, 98%);
+$background-selected-color: hsl(58, 100%, 51%);
+
+$font-black: hsl(100, 4%, 14%);
+$font-gray: hsl(30, 2%, 35%);
+$font-sutil-gray-color: hsl(141, 14%, 76%);
+$sutil-dark-purple-gray-color: hsl(265, 15%, 31%);
+$font-dark-linked-color: hsl(265, 74%, 30%);
+$font-linked-color: hsl(265, 76%, 44%);
+$font-linked-hover-color: hsl(272, 94%, 52%);
+$font-low-contrast-color: hsl(200, 3%, 82%);
+$josh-blue-white: hsl(225, 25%, 95%);
+$josh-light-blue: hsl(204, 66%, 85%);
+$underline-color: hsl(255, 74%, 74%);
+$transparent: rgba(0, 0, 0, 0);
+
+$skillshare-green: hsl(151, 100%, 50%);
+$spotify-text-green: hsl(141, 76%, 48%);
+
+$font-weight-heavy: 800;
+$font-weight-bolder: 740;
+$font-weight-bold: 690;
+$font-weight-normal: 620;
+$font-weight-light: 500;
+$font-weight-lighter: 400;
+$font-weight-lightest: 300;
+
+///////////// SIZE ////////////////////
+$font-size-imcrement: 0.5;
+$font-size-nacho: calc(#{$font-size-imcrement}vw + 0.8vw + 40px); //6rem
+$font-size-huge: calc(#{$font-size-imcrement}vw + 0.4vw + 30px); //3.7rem;
+$font-size-big: calc(#{$font-size-imcrement}vw + 0vw + 18px); //2.5rem; //
+$font-size-normal: calc(#{$font-size-imcrement}vw + 0.3vw + 13px); //2rem;
+$font-size-small: calc(#{$font-size-imcrement}vw - 0vw + 12px); //1.6rem;
+$font-size-information: calc(#{$font-size-imcrement}vw - 0vw + 8px); //1.3rem;
+$font-size-linkNumber: calc(0.4vw + 7px); //0.8rem;
+
+///////////////// Transition ///////////////
+$trans-fast: 0.15s;
+$trans-normal: 0.3s;
+$trans-slow: 0.45s;
+$trans-turtle: 0.9s;
+
+$delay-fast: 0.1s;
+$delay-normal: 0.16s;
+$delay-slow: 0.314s;
+
+///////////////// CURSORS ///////////////
+$cursor-pointer-hand:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:23px;'><text y='57%'>👆</text></svg>")
+        16 0,
+    auto;
+
+$cursor-pointer-down-hand:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:23px;'><text y='57%'>👇</text></svg>")
+        16 0,
+    auto;
+
+html {
+    font-size: 62.5%; //Now 10px is equal 1rem
+    box-sizing: border-box;
+    cursor: $cursor-pointer-hand;
+    min-height: 100vh;
+}
+* {
+    margin: 0px;
+    border: 0px;
+}
+*,
+*::before *::after {
+    box-sizing: inherit;
+}
+
+body {
+    // background-color: $underline-color;
+    font-family: $ff-recursive;
+    font-variation-settings:
+        "MONO" 1,
+        $CASL,
+        "wght" $font-weight-normal,
+        $slnt;
+    font-size: $font-size-normal;
+    /////////////// | V | V | V | V | V | V | V /////////////
+    header {
+        height: 100vh;
+        background-color: $font-linked-color;
+        #down-arrows {
+            cursor: $cursor-pointer-down-hand;
+            .down-arrow {
+                // these 8 lines for absoilute center position: like this https://jsfiddle.net/mBBJM/1/
+                bottom: 0;
+                height: 320px; //need to set a height to let it position absolute center
+                left: 0;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 200px;
+
+                font-size: $font-size-huge;
+                color: $josh-light-blue;
+
+                font-family: $ff-recursive;
+                font-variation-settings:
+                    "MONO" 0.5,
+                    "CASL" 1,
+                    "wght" $font-weight-lighter;
+                transition: 0.1s;
+            }
+
+            // Arrow with mouse position or not, depending if the width(desktop/mobile)
+            #mobile-arrow {
+                display: none;
+            }
+            // #desktop-arrow {
+            //   display: none;
+            // }
+            // #mobile-arrow {
+            //   display: block;
+            // }
+            // @media (min-width: 768px) {
+            //   #desktop-arrow {
+            //     display: block;
+            //   }
+            //   #mobile-arrow {
+            //     display: none;
+            //   }
+            // }
+        }
+    }
+}

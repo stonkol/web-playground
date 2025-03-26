@@ -1,0 +1,31 @@
+/*Forked from: https://codepen.io/cassie-codes/pen/WNQqZJG*/
+
+.header {
+    width: 1vw;
+    background-color: white;
+    align-item: center;
+    justify-content: center;
+    display: flex;
+    color: #091e28c4;
+    font-family: "Arvo", serif;
+}
+body {
+    min-height: calc(100vh - 1rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+/*
+body {
+  min-height: calc(100vh - 1rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}*/
+svg {
+    flex-shrink: 0;
+    width: 600px;
+    max-width: 90vw;
+}
