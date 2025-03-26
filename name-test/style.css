@@ -1,0 +1,32 @@
+
+body{
+  height: 90vh;
+    width: 100%;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#HC {
+   font-family: 'Recursive';
+    // fill: rgb(5, 165, 65);
+   transition: font-variation-settings 0.01s;
+   font-variation-settings: 'MONO' 0.3, 'CASL' 0.3, 'wght' 500, 'slnt' -10, 'CRSV' 0;
+
+   animation: HCAnim 2s infinite;
+}
+@keyframes HCAnim {
+  0% {
+    fill: rgb(224, 238, 237);
+  }
+  20% {
+    fill: rgb(239, 234, 245);
+  }
+  50% {
+    fill: rgb(237, 239, 250);
+  }
+  100% {
+    fill: rgb(235, 233, 237);
+  }
+}

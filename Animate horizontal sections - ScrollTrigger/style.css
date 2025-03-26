@@ -1,0 +1,43 @@
+body {
+    overflow-x: hidden;
+    --bg-color: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.section {
+    font-size: 5rem;
+    transition: 1s;
+}
+.section--large {
+    width: 100vw;
+    background-color: #e4002b;
+    color: white;
+}
+.section--small {
+    width: 46rem;
+}
+.section--dark {
+    color: white;
+    background-color: black;
+}
+
+.center-marker {
+    position: fixed;
+    width: 2px;
+    height: 100vh;
+    background: tomato;
+    top: 0;
+    left: calc(50vw - 1px);
+}
+
+section {
+    font-weight: 900;
+    transition: color 0.3s;
+}
+
+section.active {
+    /*   color: orange; */
+    background-color: orange;
+}

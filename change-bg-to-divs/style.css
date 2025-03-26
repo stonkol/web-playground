@@ -1,0 +1,63 @@
+body {
+    height: 100%;
+    --bg-color: purple;
+    --text-color: pink;
+}
+#v {
+    position: absolute;
+    width: 200px;
+    height: 136px;
+    top: 8%;
+    left: 50%;
+    margin: -68px 0 0 -100px;
+    z-index: 5;
+
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+
+    transition: 1.5s 3s;
+}
+#bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    widht: 100%;
+    height: 100%;
+    z-index: 1;
+    background: var(--bg-color);
+    transition: 1.3s 3s;
+}
+.trigger {
+    position: absolute;
+    width: 200px;
+    height: 136px;
+    margin: -68px 0 0 -100px;
+    background: #333;
+    z-index: 2;
+    --bg-color: red;
+}
+#t1 {
+    top: 70%;
+    left: 50%;
+}
+#t2 {
+    top: 30%;
+    left: 50%;
+}
+.trigger:hover ~ #bg,
+.trigger:hover ~ #v {
+    transition: 1.3s;
+}
+#t1:hover ~ #bg,
+#t1:hover ~ #v {
+    --bg-color: green !important;
+    --text-color: blue !important;
+}
+#t2:hover ~ #bg,
+#t2:hover ~ #v {
+    --bg-color: blue !important;
+    --text-color: orange !important;
+}
